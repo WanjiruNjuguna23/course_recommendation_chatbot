@@ -1,0 +1,12 @@
+<!-- select_interests.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Select Your Interests</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Render form fields with <p> tags -->
+    <button type="submit">Get Recommendations</button>
+  </form>
+{% endblock %}

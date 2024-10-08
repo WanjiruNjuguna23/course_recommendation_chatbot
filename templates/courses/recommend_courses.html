@@ -1,0 +1,17 @@
+<!-- recommend_courses.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Recommended Courses</h2>
+
+  {% if courses %}
+    <ul>
+      {% for course in courses %}
+        <li>{{ course.name }} - {{ course.description }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No courses match your interests. Please try again.</p>
+  {% endif %}
+{% endblock %}
