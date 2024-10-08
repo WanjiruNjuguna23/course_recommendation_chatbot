@@ -15,8 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('courses.urls')),  # Map the root URL to the courses app
 ]
+
+# course_recommendation_chatbot/urls.py
+
+#from django.contrib import admin
+#from django.urls import path, include  # include will let us include app-specific URLs
+
+#urlpatterns = [
+    #path('admin/', admin.site.urls),
+    #path('', include('courses.urls')),  # Map the root URL to the courses app
+#]
